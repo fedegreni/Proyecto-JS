@@ -33,3 +33,5 @@ function actualizarNumeroCarrito() {
     const cuenta = memoria.reduce((acum, current) => acum+current.cantidad, 0 );
     cuentaCarritoElement.innerText = cuenta;
 } 
+
+actualizarNumeroCarrito();
