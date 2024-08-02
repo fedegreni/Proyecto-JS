@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./index.css"> -->
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./cart.css">
     <script src="./js/cart.js" defer></script>
     <script src="./js/cartService.js" defer></script>
+    
     <title>Paletas.carrito</title>
 </head>
 <body>
@@ -22,12 +23,16 @@
     </nav>
   </header> 
   <main>
-    <section id="productos-container">
-
+    <section id="productos-container"></section>
+    <section id="totales">
+      <p>Total unidades:  <span id="unidades">0</span></p>
+      <p>Total precio: $<span id="precio">0</span></p>
+      <button disabled >Comprar</button>
+      <button >Reiniciar carrito</button>
     </section>
   </main>
   <footer>
-    <p>Tienda de paleta de pédel</p>
+    <p>Tienda de paleta de padel</p>
     <p>Creado por Federico Grenillon</p>
   </footer> 
 </body>

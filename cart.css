@@ -1,0 +1,44 @@
+#productos-container{
+    width: 500px;
+    margin: auto;
+    
+}
+
+.tarjeta-producto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.tarjeta-producto img{
+    height: 150px;
+    aspect-ratio: 1.5;
+}
+
+.boton-cart{
+    border-radius: 20%;
+    background-color: var(--color-acento);
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    border: none;
+}
+
+.tarjeta-producto h3{
+    width: 130px;
+}
+
+.tarjeta-producto button{
+    font-size: larger;
+    background-color: var(--color-acento);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    border:unset;
+    cursor:pointer;
+  }
+
+#totales{
+    text-align: center;
+}

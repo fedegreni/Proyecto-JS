@@ -11,13 +11,19 @@ productos.forEach(producto => {
         <img src="${producto.img}">
         <h3>${producto.nombre}</h3>
         <p>${producto.precio}</p>
-        <button id="btn${producto.id}">Agregar al carrito</button>
-        
-        `
+        <div class="botones">
+        <button class="boton-cart">-</button>
+        <span class="cantidad">0</span>
+        <button class="boton-cart">+</button>
+        </div>
+        `;
         contenedorTarjetas.appendChild(nuevaPaleta);
         nuevaPaleta
-        .getElementsByTagName("button")[0]
+        .getElementsByTagName("button")[1]
         .addEventListener("click", () => agregarAlCarrito(producto));
+        nuevaPaleta
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () => restarAlCarrito(producto));
          });
     }
 }

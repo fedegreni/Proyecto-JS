@@ -18,6 +18,30 @@ function agregarAlCarrito(producto) {
         actualizarNumeroCarrito();
         
     }
+function restarAlCarrito(producto) {
+    const memoria = JSON.parse(localStorage.getItem("paletas"));
+    const indice = memoria.findIndex(paleta => paleta.id === producto.id);
+    const nuevaMemoria = memoria;
+    nuevaMemoria[indice].cantidad --;
+    if (nuevaMemoria[indice].cantidad === 0) {
+        nuevaMemoria.splice(indice, 1);
+    }
+    localStorage.setItem("paletas", JSON.stringify(nuevaMemoria));
+    actualizarNumeroCarrito();
+}
+
+// function restarAlCarrito(producto){
+//     const memoria = JSON.parse(localStorage.getItem("paletas"));
+//     const indice = memoria.findIndex(paleta => paleta.id === producto.id);
+//     if (memoria[indice].cantidad === 1) {
+//         memoria.splice(indice, 1);
+//         localStorage.setItem("paletas", JSON.stringify(memoria));
+//      } else {
+//         memoria[indice].cantidad --;
+//         }
+//         localStorage.setItem("paletas", JSON.stringify(memoria));
+     
+// }
 
 
 //Toma un producto, agrega cantidad 1 y lo devuelve
