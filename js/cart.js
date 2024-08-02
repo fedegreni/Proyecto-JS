@@ -15,11 +15,13 @@ productos.forEach(producto => {
         
         `
         contenedorTarjetas.appendChild(nuevaPaleta);
-        nuevaPaleta.getElementsByTagName("button")[0].addEventListener("click", () => {
+        nuevaPaleta
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () => agregarAlCarrito(producto));
          });
-    });
+    }
 }
-}
+
 
 
 crearTarjetasProductosInicio();
