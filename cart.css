@@ -39,6 +39,7 @@
     cursor:pointer;
   }
 
-#totales{
+#totales, #carrito-vacio{
     text-align: center;
 }
+
