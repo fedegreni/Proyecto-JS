@@ -55,7 +55,7 @@ function actualizarTotales() {
         });
         unidadesElement.innerText = unidades;
         precioElement.innerText = precio;
-    } else {
+    } else  {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -100,68 +100,6 @@ function mostrarComprados() {
         });
     }
 }
-
-
-//asincronia y promesa
-
-// function obtenerProductos() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             const productos = JSON.parse(localStorage.getItem('paletas'));
-//             if (productos) {
-//                 resolve(productos);
-//             } else {
-//                 reject("No se encontraron productos.");
-//             }
-//         }, 1000); // Simular un retraso de 1 segundo
-//     });
-// }
-// async function crearTarjetasProductosInicio() {
-//     contenedorTarjetas.innerHTML = "";
-//     try {
-//         const productos = await obtenerProductos();
-//         console.log(productos);
-//         if (productos.length > 0) {
-//             productos.forEach(producto => {
-//                 const nuevaPaleta = document.createElement('div');
-//                 nuevaPaleta.classList = "tarjeta-producto";
-//                 nuevaPaleta.innerHTML = `
-//                     <img src="${producto.img}">
-//                     <h3>${producto.nombre}</h3>
-//                     <p>${producto.precio}</p>
-//                     <div class="botones">
-//                         <button class="boton-cart">-</button>
-//                         <span class="cantidad">${producto.cantidad}</span>
-//                         <button class="boton-cart">+</button>
-//                     </div>
-//                 `;
-//                 contenedorTarjetas.appendChild(nuevaPaleta);
-//                 nuevaPaleta
-//                     .getElementsByTagName("button")[1]
-//                     .addEventListener("click", (e) => {
-//                         const cuentaElement = e.target.parentElement.getElementsByTagName("span")[0];
-//                         cuentaElement.innerText = agregarAlCarrito(producto);
-//                         actualizarTotales();
-//                     });
-//                 nuevaPaleta
-//                     .getElementsByTagName("button")[0]
-//                     .addEventListener("click", (e) => {
-//                         restarAlCarrito(producto);
-//                         crearTarjetasProductosInicio();
-//                         actualizarTotales();
-//                     });
-//             });
-//         }
-//     } catch (error) {
-//         Swal.fire({
-//             icon: "error",
-//             title: "Oops...",
-//             text: error,
-//             footer: '<a href="./index.html">Presione AQUI para volver al inicio y agregar productos</a>'
-//         });
-//     }
-// }
-
 
 
 
@@ -220,7 +158,7 @@ function actualizarNumeroCarrito() {
     if (memoria && memoria.length > 0) {
         const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
         cuentaCarritoElement.innerText = cuenta;
-        console.log(cuenta);
+        
     } else {
         cuentaCarritoElement.innerText = 0;
     }

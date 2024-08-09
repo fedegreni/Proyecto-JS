@@ -37,9 +37,26 @@
     color: white;
     border:unset;
     cursor:pointer;
+    border-style: none;
   }
 
 #totales, #carrito-vacio{
     text-align: center;
 }
 
+#compra {
+    background-color: var(--color-acento);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-style: none;
+}
+#reiniciar {
+    background-color: var(--color-acento);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-style: none;
+}
