@@ -66,8 +66,7 @@ function actualizarTotales() {
 }
 
 reiniciarCarritoElement.addEventListener("click", reiniciarCarrito);
-comprarElement.addEventListener("click", mostrarComprados); // Añadir evento de clic para el botón comprar
-
+comprarElement.addEventListener("click", mostrarComprados); 
 function mostrarComprados() {
     const productos = JSON.parse(localStorage.getItem('paletas'));
     if (productos && productos.length > 0) {
